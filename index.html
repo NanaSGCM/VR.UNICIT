@@ -6,9 +6,44 @@
     <meta name="description" content="Página informativa sobre realidad virtual realizada por los estudiantes de ingeniería en sistemas de UNICIT para la feria de ideas creativas 2022">
     <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;400;500&family=Nova+Square&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css">
+    <link rel="stylesheet" href="./css/index_style.css">
     <title>REALIDAD VIRTUAL - UNICIT</title>
 </head>
 <body>
-    <h1>Hola</h1>
+    <header>
+        <nav>
+            <div  class="logo">
+                <i class="fa-duotone fa-head-side-goggles"></i>
+                <a href="#">Realidad Virtual</a>
+            </div>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fa-solid fa-ellipsis-stroke-vertical"></i>
+            </label>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Historia</a></li>
+                <li><a href="#">Juegos</a></li>
+                <li><a href="#">Videos</a></li>
+                <li><a href="#">Más</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="banner-1">
+
+        </section>
+    </main>
+    <footer></footer>
+    <script type="text/javascript">
+        window.addEventListener("scroll", function(){
+            var nav = document.querySelector("nav");
+            nav.classList.toggle("sticky", window.scrollY > 0);
+        })
+    </script>
 </body>
 </html>
