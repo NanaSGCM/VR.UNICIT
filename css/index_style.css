@@ -7,6 +7,7 @@
 /*6.SECTION MÁS*/
 
 :root{
+    --verdelima:#79f946;
     --rosado:#F046F9;
     --morado:#A83DDB;
     --lila:#9250F2;
@@ -14,7 +15,7 @@
     --celeste:#465FF9;
     --just-white:#fff;
     --white:#e7e7e7;
-    --dark-color:#1c232b;
+    --dark-color:#201d20;
     --black: #000000;
 }
 
@@ -37,16 +38,16 @@ nav {
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-    padding: 40px;
+    padding: 30px;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 99;
-    transition: background 0.5s ease;
+    transition: background 2s ease;
 }
 
 nav.sticky{
-    padding: 15px;
+    padding: 10px;
     background: linear-gradient(var(--rosado), var(--lila), var(--celeste), transparent)
 }
 
@@ -74,7 +75,7 @@ nav .logo a{
     text-transform: uppercase;
     letter-spacing: 2px;
     transition: 0.6s;
-    color: var(--rosado);    
+    color: var(--verdelima);    
 }
 
 nav .logo i{
@@ -84,7 +85,7 @@ nav .logo i{
 }
 
 nav ul{
-    height: 10rem;
+    height: 60px;
     float: right;
     display: inline-flex;
     justify-content: center;
@@ -101,11 +102,19 @@ nav ul li{
 nav ul li a{
     position: relative;
     margin: 0 15px;
+    width: 100px;
     text-decoration: none;
     color: var(--white);
     letter-spacing: 2px;
     font-weight: 500px;
     transition: 0.6s;
+}
+
+nav ul li a:hover{
+    background-color: var(--morado);
+    padding: 7px;
+    border-radius: 5px;
+    color: var(--verdelima);
 }
 
 nav .checkbtn {
@@ -126,12 +135,48 @@ nav .checkbtn {
 .banner-1{
     position: relative;
     width: 100%;
-    height: 115vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(255, 0, 179, 0.5)), url("../assets/img/vr-mujer-grande_AdobeExpress.gif");
+    height: 80vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(255, 0, 179, 0.5)), url("../assets/img/vr-men-grande_AdobeExpress.gif");
     background-size: cover;
 }
 
+.banner-1-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 100px;
+}
+
+.banner-1-left{
+    padding: 20%;
+    align-self: center;
+}
+
+.banner-1-left h1{
+    color: var(--white);
+    text-align: left;
+}
+
+
+.banner-1-right{
+    overflow: hidden;
+}
+
+.banner-1-right img{
+    width: 100%;
+    height: auto;
+    max-width: fit-content;
+}
+
+.banner-2{
+    width: 100%;
+    height: 60vh;
+}
+
 @media (max-width: 920px) {
+    .banner-1{
+        height: 80vh;
+    }
+
     nav .checkbtn {
         display: block;
     }
@@ -144,11 +189,12 @@ nav .checkbtn {
         position: fixed;
         width: 100%;
         height: 100vh;
-        top: 10rem;
+        top: 100px;
         left: -100%;
         display: list-item;
         text-align: center;
         transition: .5s;
+        background: linear-gradient(transparent, rgba(131, 42, 116, 0.842));
     }
 
     nav li {
@@ -169,16 +215,20 @@ nav .checkbtn {
 }
 
 @media (max-width: 500px){
+    .banner-1{
+        height: 55vh;
+    }
+
+    .banner-1-left{
+        padding: 10%;
+    }
+
     nav{
         padding: 15px;
     }
 
     nav.sticky{
         padding: 5px;
-    }
-
-    nav ul{
-        top: 100px;
     }
 
     nav .logo{
@@ -198,5 +248,20 @@ nav .checkbtn {
     nav .checkbtn{
         width: fit-content;
         margin-right: 5px;
+    }
+
+    .banner-1-grid{
+        display: grid;
+        grid-template-columns: 55% 45%;
+        padding-top: 65px;
+        max-height: fit-content;
+    }
+
+    .banner-1-left h1{
+        font-size: 1rem;
+    }    
+
+    .banner-1-right{
+        align-self: center;
     }
 }
