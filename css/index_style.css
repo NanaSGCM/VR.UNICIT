@@ -32,6 +32,7 @@ html{
 }
 
 /*HEADER*/
+
 nav {
     position: fixed;
     display: flex;
@@ -43,12 +44,12 @@ nav {
     left: 0;
     width: 100%;
     z-index: 99;
-    transition: background 2s ease;
+    transition: 0.2s;
 }
 
 nav.sticky{
     padding: 10px;
-    background: linear-gradient(var(--rosado), var(--lila), var(--celeste), transparent)
+    background: linear-gradient(var(--rosado), var(--lila), var(--celeste), transparent);
 }
 
 nav.sticky .logo i{
@@ -75,7 +76,7 @@ nav .logo a{
     text-transform: uppercase;
     letter-spacing: 2px;
     transition: 0.6s;
-    color: var(--verdelima);    
+    color: var(--verdelima);
 }
 
 nav .logo i{
@@ -135,7 +136,7 @@ nav .checkbtn {
 .banner-1{
     position: relative;
     width: 100%;
-    height: 80vh;
+    height: auto;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(255, 0, 179, 0.5)), url("../assets/img/vr-men-grande_AdobeExpress.gif");
     background-size: cover;
 }
@@ -171,6 +172,76 @@ nav .checkbtn {
     width: 100%;
     height: 60vh;
 }
+
+
+/* SECTION 1 */
+
+.benefits{
+    width: 100%;
+    height: auto;
+    padding: 5rem 3rem 10rem 3rem;
+    background-color: #201d20;
+}
+
+.benefits h1{
+    color: white;
+    font-size: 5rem;
+    text-align: center;
+}
+
+.benefits .content{
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.benefits .card-1{
+    width: auto;
+    height: auto;
+    border-radius: 1rem;
+
+    display: grid;
+    place-items: center;
+    grid-template-areas: "main";
+
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.benefits .card-1 img{
+    width: 30rem;
+    height: 40rem;
+    border-radius: inherit;
+
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+.benefits .card-1 > *{
+    grid-area: main;
+}
+
+.benefits .card-1 > p{
+    opacity: 0;
+    color: white;
+    font-size: 1.5em;
+    width: 20rem;
+
+    transition: opacity 400ms, transform 400ms;
+}
+
+.benefits .card-1:is(:hover, :focus) > img{
+    filter: brightness(0.4);
+    transform: scale(1.1);
+}
+
+.benefits .card-1:is(:hover, :focus) > p{
+    opacity: 1;
+    transform: scale(1.1001);
+}
+
+
 
 @media (max-width: 920px) {
     .banner-1{
@@ -233,6 +304,10 @@ nav .checkbtn {
 
     nav .logo{
         margin-right: 0px;
+    }
+
+    .benefits .content{
+        flex-direction: column;
     }
 }
 
