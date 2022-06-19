@@ -75,7 +75,6 @@ nav .logo a{
     font-family: 'Nova Square', cursive;
     text-transform: uppercase;
     letter-spacing: 2px;
-    transition: 0.6s;
     color: var(--verdelima);
 }
 
@@ -108,7 +107,7 @@ nav ul li a{
     color: var(--white);
     letter-spacing: 2px;
     font-weight: 500px;
-    transition: 0.6s;
+    transition: 0.2s;
 }
 
 nav ul li a:hover{
@@ -185,7 +184,7 @@ nav .checkbtn {
 
 .benefits h1{
     color: white;
-    font-size: 5rem;
+    font-size: 2.5rem;
     text-align: center;
 }
 
@@ -241,7 +240,53 @@ nav .checkbtn {
     transform: scale(1.1001);
 }
 
+/* SECTION 3 */
 
+.bloc{
+    width: 100%;
+    height: auto;
+    padding: 5rem 3rem 10rem 3rem;
+    background-color: #2b292b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.bloc .cards-2{
+    width: 30rem;
+    height: 40rem;
+    border-radius: 1rem;
+    background-color: white;
+}
+
+.bloc .cards-2 .img{
+    width: 100%;
+    height: 45%;
+    border-radius: 1rem 1rem 0rem 0rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.bloc .cards-2 .img img{
+    width: 100%;
+    height: auto;
+    border-radius: 1rem 1rem 0rem 0rem;
+}
+
+.bloc .cards-2 h2{
+    font-size: 2rem;
+    margin: 1rem 0rem 1rem 0rem;
+    padding: 0rem 1rem 0rem 1rem;
+}
+
+.bloc .cards-2 p{
+    font-size: 2rem;
+    padding: 0rem 1rem 0rem 1rem;
+}
 
 @media (max-width: 920px) {
     .banner-1{
@@ -306,9 +351,11 @@ nav .checkbtn {
         margin-right: 0px;
     }
 
-    .benefits .content{
+    .benefits .content,
+    .bloc{
         flex-direction: column;
     }
+    
 }
 
 @media (max-width: 360px){
