@@ -330,13 +330,13 @@ nav .checkbtn {
         margin-right: 2%;
         position: fixed;
         width: 96%;
-        height: 320px;
-        top: 70px;
-        left: -100%;
-        padding-top: 0px;
+        height: 36rem;
+        left: 0%;
+        top: -100%;
+        padding-top: 5rem;
         display: list-item;
         text-align: center;
-        transition: .5s;
+        transition: .7s;
         border-bottom-right-radius: 20px;
         border-bottom-left-radius: 20px;
         background: linear-gradient( var(--celeste), var(--lila), var(--rosado));
@@ -356,13 +356,13 @@ nav .checkbtn {
         margin-right: 2%;
         position: fixed;
         width: 96%;
-        height: 380px;
-        top: 10px;
-        left: -100%;
-        padding-top: 60px;
+        height: 36rem;
+        left: 0%;
+        top: -100%;
+        padding-top: 5rem;
         display: list-item;
         text-align: center;
-        transition: .5s;
+        transition: 0.8s;
         border-bottom-right-radius: 20px;
         border-bottom-left-radius: 20px;
         background: linear-gradient( transparent,var(--celeste), var(--lila), var(--rosado));
@@ -382,7 +382,7 @@ nav .checkbtn {
     }
 
     #check:checked~ul {
-        left: 0;
+        top: 0%;
     }
 
     .call-to{
