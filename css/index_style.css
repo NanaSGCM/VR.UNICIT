@@ -34,6 +34,8 @@ html{
 /*HEADER*/
 
 nav {
+    height: 100px;
+    margin: auto;
     position: fixed;
     display: flex;
     flex-wrap: wrap;
@@ -48,28 +50,36 @@ nav {
 }
 
 nav.sticky{
+    width: 96%;
+    height: 80px;
     padding: 10px;
-    background: linear-gradient(var(--rosado), var(--lila), var(--celeste), transparent);
+    border-radius: 20px;
+    margin: 2% 2%;
+    background: linear-gradient(var(--rosado), var(--lila), var(--celeste));
 }
 
 nav.sticky .logo i{
     color: var(--white);
 }
 
-nav.sticky .logo a{
+nav.sticky .logo p{
     color: var(--white);
 }
 
 nav .logo{
+    display: inline-flex;
+    flex-direction: row;
     position: relative;
     justify-content: center;
     align-items: center;
-    margin-right: 40px;
+    margin-right: 20px;
     cursor: pointer;
 }
 
-nav .logo a{
+nav .logo p{
+    width: 100px;
     text-decoration: none;
+    text-align: center;
     font-size: 2rem;
     font-weight: 700;
     font-family: 'Nova Square', cursive;
@@ -120,7 +130,7 @@ nav ul li a:hover{
 nav .checkbtn {
     font-size: 3rem;
     font-weight: bold;
-    width: 45px;
+    width: 40px;
     color: var(--white);
     float: right;
     cursor: pointer;
@@ -131,40 +141,58 @@ nav .checkbtn {
     display: none;
 }
 
+/*SECTION BANNER-1*/
 
 .banner-1{
+    display: flex;
+    align-items: center;
     position: relative;
     width: 100%;
-    height: auto;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(255, 0, 179, 0.5)), url("../assets/img/vr-men-grande_AdobeExpress.gif");
+    height: 80vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(175, 15, 127, 0.5)), url("../assets/img/vr-men-grande_AdobeExpress.gif");
     background-size: cover;
 }
 
-.banner-1-grid{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    padding-top: 100px;
+.banner-1-content{
+    display: inline-flex;
+    flex-direction: column;
+    text-align: center;
+    min-width: 200px;
+    max-width: 400px;
+    margin: 0 auto;
+    padding-top: 2%;
 }
 
-.banner-1-left{
-    padding: 20%;
+.banner-1-content h1{
+    padding: 20px;
+    font-size: 3.6rem;
+    font-weight: bold;
+    font-family: 'Nova Square', cursive;
+    color: var(--white);
+}
+
+.banner-1-text{
+    padding: 5%;
     align-self: center;
 }
 
-.banner-1-left h1{
+.banner-1-text h2{
     color: var(--white);
-    text-align: left;
 }
 
-
-.banner-1-right{
-    overflow: hidden;
+.banner-1-call-to {
+    display: flex;
+    font-size: 2rem;
+    font-weight: 700;
+    justify-content: center;
 }
 
-.banner-1-right img{
-    width: 100%;
-    height: auto;
-    max-width: fit-content;
+.banner-1-call-to a{
+    text-decoration: none;
+    padding: 10px;
+    color: var(--white);
+    background-color: var(--lila);
+    border-radius: 15px;
 }
 
 .banner-2{
@@ -289,10 +317,6 @@ nav .checkbtn {
 }
 
 @media (max-width: 920px) {
-    .banner-1{
-        height: 80vh;
-    }
-
     nav .checkbtn {
         display: block;
     }
@@ -301,16 +325,48 @@ nav .checkbtn {
         justify-content: space-between;
     }
 
-    nav ul {
+    nav.sticky ul {
+        margin-left: 2%;
+        margin-right: 2%;
         position: fixed;
-        width: 100%;
-        height: 100vh;
-        top: 100px;
+        width: 96%;
+        height: 320px;
+        top: 70px;
         left: -100%;
+        padding-top: 0px;
         display: list-item;
         text-align: center;
         transition: .5s;
-        background: linear-gradient(transparent, rgba(131, 42, 116, 0.842));
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        background: linear-gradient( var(--celeste), var(--lila), var(--rosado));
+        z-index: -8000;
+    }
+
+    nav.sticky li {
+        margin: 3rem 0;
+        line-height: 1rem;
+        display: block;
+        font-size: 2rem;
+        padding: 1rem;
+    }
+
+    nav ul {
+        margin-left: 2%;
+        margin-right: 2%;
+        position: fixed;
+        width: 96%;
+        height: 380px;
+        top: 10px;
+        left: -100%;
+        padding-top: 60px;
+        display: list-item;
+        text-align: center;
+        transition: .5s;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        background: linear-gradient( transparent,var(--celeste), var(--lila), var(--rosado));
+        z-index: -8000;
     }
 
     nav li {
@@ -318,7 +374,7 @@ nav .checkbtn {
         line-height: 1rem;
         display: block;
         font-size: 2rem;
-        padding: 1rem 2rem 1rem 2rem;
+        padding: 1rem;
     }
 
     nav .bar-btn {
@@ -328,17 +384,14 @@ nav .checkbtn {
     #check:checked~ul {
         left: 0;
     }
+
+    .call-to{
+        margin-top: -1.5%;
+        font-size: 1.2rem;
+    }
 }
 
 @media (max-width: 500px){
-    .banner-1{
-        height: 55vh;
-    }
-
-    .banner-1-left{
-        padding: 10%;
-    }
-
     nav{
         padding: 15px;
     }
@@ -349,6 +402,10 @@ nav .checkbtn {
 
     nav .logo{
         margin-right: 0px;
+    }
+
+    .banner-1-left{
+        padding: 10%;
     }
 
     .benefits .content,
@@ -370,20 +427,5 @@ nav .checkbtn {
     nav .checkbtn{
         width: fit-content;
         margin-right: 5px;
-    }
-
-    .banner-1-grid{
-        display: grid;
-        grid-template-columns: 55% 45%;
-        padding-top: 65px;
-        max-height: fit-content;
-    }
-
-    .banner-1-left h1{
-        font-size: 1rem;
-    }    
-
-    .banner-1-right{
-        align-self: center;
     }
 }
