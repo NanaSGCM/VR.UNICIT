@@ -31,6 +31,19 @@ html{
     background-color: var(--dark-color);
 }
 
+html::-webkit-scrollbar {
+    width: 12px;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: linear-gradient(transparent, var(--rosado));
+    border-radius: 6px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(transparent, var(--verdelima));
+}
+
 /*HEADER*/
 
 nav {
@@ -73,7 +86,7 @@ nav .logo{
     justify-content: center;
     align-items: center;
     margin-right: 20px;
-    cursor: pointer;
+    cursor: default;
 }
 
 nav .logo p{
@@ -86,6 +99,7 @@ nav .logo p{
     text-transform: uppercase;
     letter-spacing: 2px;
     color: var(--verdelima);
+    text-shadow: 0px 0px 6px rgba(174, 0, 255, 0.7);
 }
 
 nav .logo i{
@@ -118,10 +132,11 @@ nav ul li a{
     letter-spacing: 2px;
     font-weight: 500px;
     transition: 0.2s;
+    text-shadow: 0px 0px 6px rgba(255,255,255,0.7);
 }
 
 nav ul li a:hover{
-    background-color: var(--morado);
+    border-bottom: 5px solid var(--verdelima);
     padding: 7px;
     border-radius: 5px;
     color: var(--verdelima);
@@ -150,6 +165,7 @@ nav .checkbtn {
     width: 100%;
     height: 80vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(175, 15, 127, 0.5)), url("../assets/img/vr-men-grande_AdobeExpress.gif");
+    background-position: center center;
     background-size: cover;
 }
 
@@ -183,7 +199,7 @@ nav .checkbtn {
 .banner-1-call-to {
     display: flex;
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 500;
     justify-content: center;
 }
 
@@ -192,12 +208,120 @@ nav .checkbtn {
     padding: 10px;
     color: var(--white);
     background-color: var(--lila);
+    text-shadow: 0px 0px 6px rgba(255,255,255,0.7);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;    
     border-radius: 15px;
+    width: 150px;
 }
+
+.banner-1-call-to a:hover{
+    color: var(--verdelima);
+    background-image: linear-gradient(90deg, var(--celeste) 0%, var(--morado) 49%, var(--rosado) 80%, var(--lila) 100%);
+    animation:slidebg 5s linear infinite;
+    width: 200px;
+}
+
+@keyframes slidebg {
+    to {
+      background-position:20vw;
+    }
+}
+
+/* SECTION BANNER-2*/
 
 .banner-2{
     width: 100%;
-    height: 60vh;
+    height: 550px;
+    display: flex;
+    align-items: center;
+}
+
+.banner-2-content{
+    display: inline-flex;
+    flex-direction: column;
+    text-align: center;
+    min-width: 280px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2%;
+}
+
+.banner-2-content h3{
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: 'Nova Square', cursive;
+    color: var(--celeste);
+}
+
+.banner-2-information{
+    font-size: 1.5rem;
+    padding: 20px;
+    color: var(--white);
+}
+
+.banner-2-grid{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    overflow-x: auto;
+    height: 310px;
+    width: 100%;
+    padding: 4%;
+    scroll-behavior: smooth;
+    gap:30px;
+}
+
+.banner-2-grid::-webkit-scrollbar {
+    width: 12px;
+}
+
+.banner-2-grid::-webkit-scrollbar-thumb {
+    background: linear-gradient(transparent, var(--rosado));
+    border-radius: 6px;
+}
+
+.banner-2-grid::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(transparent, var(--verdelima));
+}
+
+.banner-2-grid-card{
+    justify-content: center;
+    display: inline-flex;
+    flex-direction: column;
+    padding: 10px;
+    min-height: 200px;
+    min-width: 300px;
+    max-width: 400px;
+    border-radius: 15px;
+    background-color: aliceblue;
+    background-position: center center;
+    background-size: cover;
+}
+
+#card-1{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(79, 175, 15, 0.5)), url("../assets/img/card1.jpg");
+}
+
+#card-2{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(15, 175, 127, 0.5)), url("../assets/img/card2.png");
+}
+
+#card-3{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(15, 103, 175, 0.5)), url("../assets/img/card3.jpg");
+}
+
+#card-4{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(31, 15, 175, 0.5)), url("../assets/img/card4.jpg");
+}
+
+.banner-2-grid .grid-card-tittle{
+    color: var(--lila);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.banner-2-grid .grid-card-content{
+    color: var(--just-white);
+    font-size: 1.3rem;
 }
 
 
@@ -405,8 +529,8 @@ nav .checkbtn {
         margin-right: 0px;
     }
 
-    .banner-1-left{
-        padding: 10%;
+    .banner-2{
+        height: 650px;
     }
 
     .benefits .content,
