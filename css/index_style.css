@@ -247,13 +247,14 @@ nav .checkbtn {
 }
 
 .banner-2-content h3{
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: bold;
     font-family: 'Nova Square', cursive;
     color: var(--celeste);
 }
 
 .banner-2-information{
+    text-align: justify;
     font-size: 1.5rem;
     padding: 20px;
     color: var(--white);
@@ -320,10 +321,88 @@ nav .checkbtn {
 }
 
 .banner-2-grid .grid-card-content{
+    text-align: justify;
     color: var(--just-white);
     font-size: 1.3rem;
 }
 
+/* SECTION BANNER-3*/
+.banner-3{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+	background: linear-gradient(-45deg, var(--dark-color), var(--dark-color), var(--dark-color), var(--lila));    
+    background-size: 400% 400%;
+	animation: gradient 7s ease infinite;
+}
+
+.banner-3-content{
+    display: inline-flex;
+    flex-direction: column;
+    text-align: center;
+    min-width: 280px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2%;
+}
+
+.banner-3-content h3{
+    padding-top: 40px;
+    font-size: 4rem;
+    font-weight: bold;
+    font-family: 'Nova Square', cursive;
+    color: var(--verdelima);
+}
+
+.banner-3-information-first{
+    text-align: justify;
+    margin-top: 10px;
+    font-size: 1.5rem;
+    padding: 20px;
+    color: var(--white);
+}
+
+.banner-3-information{
+    display: flex;
+    text-align: justify;
+    font-size: 1.5rem;
+    padding: 20px;
+    color: var(--white);
+    align-self: center;
+}
+
+.banner-3-grid-groups{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.banner-3-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: auto;
+    justify-items: center;
+    align-content: center;
+    border:solid;
+    border-image-slice: 1;
+    border-width: 10px;
+    border-image-source: linear-gradient(60deg, var(--lila), var(--verdelima));
+    border-radius: 25px;
+}
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
 
 /* SECTION 1 */
 
@@ -513,6 +592,19 @@ nav .checkbtn {
     .call-to{
         margin-top: -1.5%;
         font-size: 1.2rem;
+    }
+
+    .banner-3-grid{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .banner-3-information{
+        order: 1;
+    }
+
+    sketchfab-embed-wrapper{
+        order: 2;
     }
 }
 
