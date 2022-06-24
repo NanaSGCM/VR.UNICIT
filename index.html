@@ -15,6 +15,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css">
     <link rel="stylesheet" href="./css/index_style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="icon" href="/assets/icons/vr-glasses.png">
     <title>REALIDAD VIRTUAL - UNICIT</title>
 </head>
@@ -51,22 +52,23 @@
                         la ilusión de estar dentro de este entorno
                     </h2>
                 </div>
-                <div class="banner-1-call-to">
-                    <a href="#">
+                <div class="banner-1-call-to" data-aos="flip-left">
+                    <a href="#section-2">
                         EXPLORA
                     </a>
                 </div>
             </div>
         </section>
-        <section class="banner-2">
+        <section class="banner-2" id="section-2">
             <div class="banner-2-content">
-                <h3>
+                <h3 data-aos="fade-up">
                     Historia
                 </h3>
-                <p class="banner-2-information">
+                <p class="banner-2-information" data-aos="fade-up">
                     VR trae cada día más la atención del público, y es hoy en día un tema de gran actualidad. Aunque se conozca desde principios de los años 90, el concepto de realidad virtual es, sin embargo, mucho más antiguo, siendo una tecnología con una historia muy rica.
                 </p>
-                <div class="banner-2-grid">
+                <div class="banner-2-grid" data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom">
                     <div class="banner-2-grid-card" id="card-1">
                         <p class="grid-card-tittle">
                             En el siglo XX
@@ -120,23 +122,25 @@
         </section>
         <section class="banner-3">
             <div class="banner-3-content">
-                <h3>
+                <h3 data-aos="fade-up">
                     ¿Cómo funciona?
                 </h3>
-                <div class="banner-3-information-first">
+                <div class="banner-3-information-first" data-aos="fade-up">
                     ¿Cómo se consigue la sensación de estar dentro de un espacio creado por ordenador? Necesitamos unas gafas o cascos específicos y el vídeo o dispositivo que crea el entorno, que puede ser tu teléfono móvil o tu ordenador.
                 </div>
                 <div class="banner-3-grid-groups">
-                    <div class="banner-3-grid" id="b3-group1">
+                    <div class="banner-3-grid" id="b3-group1" data-aos="fade-up"
+                    data-aos-anchor-placement="top-bottom">
                         <div class="banner-3-information">
                             Las gafas nos aíslan de todo lo que nos rodean y amplían el campo de visión haciendo que parezca que la pantalla está alrededor y no solo “delante” de nosotros aunque realmente no están envolviéndonos en 360 grados.
                         </div>
                         <div class="sketchfab-embed-wrapper"> 
-                            <iframe title="Google cardboard" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="300" height="180" src="https://sketchfab.com/models/db021ae8c51d4883b803cec6790f3248/embed"> </iframe> 
+                            <iframe title="Google cardboard" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="290" height="180" src="https://sketchfab.com/models/db021ae8c51d4883b803cec6790f3248/embed"> </iframe> 
                         </div>
                     </div>
-                    <div class="banner-3-grid" id="b3-group2">
-                        <div class="sketchfab-embed-wrapper"> <iframe title="Visor 3D (Google cardboard)" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="300" height="180" src="https://sketchfab.com/models/6b0776f774e147a5aed2593fb1e76078/embed"> </iframe> </div>
+                    <div class="banner-3-grid" id="b3-group2" data-aos="fade-up"
+                    data-aos-anchor-placement="top-bottom">
+                        <div class="sketchfab-embed-wrapper"> <iframe title="Visor 3D (Google cardboard)" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="290" height="180" src="https://sketchfab.com/models/6b0776f774e147a5aed2593fb1e76078/embed"> </iframe> </div>
                         <div class="banner-3-information">
                             Para engañarnos, utilizan dos imágenes diferentes en cada ojo. Más que dos imágenes, son dos ángulos diferentes de la misma escena. Esto hace que se simule profundidad y que, sin gafas, los vídeos dedicados a esta tecnología los veas como doble o en dos trozos diferenciados.
                         </div>
@@ -222,6 +226,10 @@
             var nav = document.querySelector("nav");
             nav.classList.toggle("sticky", window.scrollY > 0);
         })
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
     </script>
 </body>
 

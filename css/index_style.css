@@ -231,9 +231,11 @@ nav .checkbtn {
 
 .banner-2{
     width: 100%;
-    height: 550px;
+    height: auto;
     display: flex;
     align-items: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .banner-2-content{
@@ -247,10 +249,12 @@ nav .checkbtn {
 }
 
 .banner-2-content h3{
-    font-size: 4rem;
+    text-transform: uppercase;
+    font-size: 3.4rem;    
     font-weight: bold;
     font-family: 'Nova Square', cursive;
     color: var(--celeste);
+    text-shadow: 0px 0px 4px rgba(163, 190, 248, 0.7);
 }
 
 .banner-2-information{
@@ -323,7 +327,7 @@ nav .checkbtn {
 .banner-2-grid .grid-card-content{
     text-align: justify;
     color: var(--just-white);
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 }
 
 /* SECTION BANNER-3*/
@@ -332,27 +336,30 @@ nav .checkbtn {
     height: auto;
     display: flex;
     align-items: center;
-	background: linear-gradient(-45deg, var(--dark-color), var(--dark-color), var(--dark-color), var(--lila));    
+	background: linear-gradient(45deg, var(--dark-color),var(--dark-color), var(--celeste), var(--dark-color), var(--dark-color));    
     background-size: 400% 400%;
-	animation: gradient 7s ease infinite;
+	animation: gradient 15s ease infinite;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .banner-3-content{
     display: inline-flex;
     flex-direction: column;
     text-align: center;
-    min-width: 280px;
+    min-width: 240px;
     max-width: 1100px;
     margin: 0 auto;
     padding: 2%;
 }
 
 .banner-3-content h3{
-    padding-top: 40px;
-    font-size: 4rem;
+    text-transform: uppercase;
+    font-size: 3.4rem;
     font-weight: bold;
     font-family: 'Nova Square', cursive;
     color: var(--verdelima);
+    text-shadow: 0px 0px 4px rgba(255,255,255,0.7);
 }
 
 .banner-3-information-first{
@@ -379,6 +386,7 @@ nav .checkbtn {
 }
 
 .banner-3-grid{
+    padding: 1%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     height: auto;
@@ -623,6 +631,11 @@ nav .checkbtn {
 
     .banner-2{
         height: 650px;
+    }
+
+    .banner-3{
+        animation: gradient 7s ease infinite;    
+        background-size: 200% 200%;
     }
 
     .benefits .content,
