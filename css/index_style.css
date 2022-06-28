@@ -12,6 +12,7 @@
     --morado:#A83DDB;
     --lila:#9250F2;
     --azul:#513DDB;
+    --felipe: #241444;
     --celeste:#465FF9;
     --aqua: #00d3c8;
     --just-white:#fff;
@@ -245,7 +246,7 @@ nav .checkbtn {
 
 .banner-2{
     width: 100%;
-    height: auto;
+    height: fit-content;
     display: flex;
     align-items: center;
     padding-top: 100px;
@@ -278,70 +279,193 @@ nav .checkbtn {
     color: var(--white);
 }
 
-.banner-2-grid{
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    overflow-x: auto;
-    height: 310px;
-    width: 100%;
-    padding: 4%;
-    scroll-behavior: smooth;
-    gap:30px;
+
+/* --- progress bar --- */
+
+.process-wrapper {
+    min-width: 280px;
 }
 
-.banner-2-grid::-webkit-scrollbar {
-    width: 12px;
+#progress-bar-container {
+	position:relative;
+	width:90%;
+	margin:auto;
+	height:100px;
+	margin-top:65px;
 }
 
-.banner-2-grid::-webkit-scrollbar-thumb {
-    background: linear-gradient(transparent, var(--rosado));
-    border-radius: 6px;
+#progress-bar-container ul {
+	padding:0;
+	margin:0;
+	padding-top:15px;
+	z-index:9;
+	position:absolute;
+	width:100%;
+	margin-top:-40px
 }
 
-.banner-2-grid::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(transparent, var(--verdelima));
+#progress-bar-container li:before {
+	content:" ";
+	display:block;
+	margin:auto;
+	width:30px;
+	height:30px;
+	border-radius:50%;
+	border:solid 2px #aaa;
+	transition:all ease 0.3s;
+     
 }
 
-.banner-2-grid-card{
-    justify-content: center;
-    display: inline-flex;
-    flex-direction: column;
-    padding: 10px;
-    min-height: 200px;
+#progress-bar-container li.active:before, #progress-bar-container li:hover:before {
+	border:solid 2px #fff;
+       	 
+	background: linear-gradient(to right, var(--aqua) 0%, var(--celeste) 100%); 
+}
+
+#progress-bar-container li {
+	list-style:none;
+	float:left;
+	width:20%;
+	text-align:center;
+	color:#aaa;
+	text-transform:uppercase;
+	font-size:11px;
+	cursor:pointer;
+	font-weight:700;
+	transition:all ease 0.2s;
+	vertical-align:bottom;
+	height:60px;
+	position:relative;
+}
+
+#progress-bar-container li .step-inner {
+	position:absolute;
+	width:100%;
+	bottom:0;
+    font-size: 14px;
+}
+
+#progress-bar-container li.active, #progress-bar-container li:hover {
+	color:var(--celeste);
+}
+
+#progress-bar-container li:after {
+	content:" ";
+	display:block;
+	width:6px;
+	height:6px;
+	background:var(--white);
+	margin:auto;
+	border:solid 7px #fff;
+	border-radius:50%;
+	margin-top:40px;
+	box-shadow:0 2px 13px -1px rgba(0,0,0,0.3);
+	transition:all ease 0.2s;
+     
+}
+
+#progress-bar-container li:hover:after {
+	background:var(--celeste);
+}
+
+#progress-bar-container li.active:after {
+	background:var(--celeste);
+}
+
+#progress-bar-container #line {
+	width:80%;
+	margin:auto;
+	background: var(--white);
+	height:6px;
+	position:absolute;
+	left:10%;
+	top:57px;
+	z-index:1;
+	border-radius:50px;
+	transition:all ease 0.9s;
+}
+
+#progress-bar-container #line-progress {
+	content:" ";
+	width:3%;
+	height:100%;
+	background: var(--aqua);	 
+	background: linear-gradient(to right, var(--aqua) 0%,var(--celeste) 100%); 
+	position:absolute;
+	z-index:2;
+	border-radius:50px;
+	transition:all ease 0.9s;
+}
+
+#progress-content-section {
+	width:100%;
+	margin: auto;
+	background: var(--white);
+	border-radius: 4px;
+}
+
+#progress-content-section .section-content {
+	padding:30px 40px;
+	text-align:center;
+    display:none;
+	animation: FadeInUp 700ms ease 1;
+	animation-fill-mode:forwards;
+	transform:translateY(15px);
+	opacity:0;
     min-width: 300px;
-    max-width: 400px;
-    background-color: aliceblue;
-    background-position: center center;
-    background-size: cover;
-    box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;    
 }
 
-#card-1{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(79, 175, 15, 0.5)), url("../assets/img/card1.jpg");
+#progress-content-section .content-grid{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    gap: 20px;
 }
 
-#card-2{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(15, 175, 127, 0.5)), url("../assets/img/card2.png");
+#progress-content-section .content-grid .grid-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-#card-3{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(15, 103, 175, 0.5)), url("../assets/img/card3.jpg");
+#progress-content-section .content-grid .grid-right{
+    display: flex;
+    justify-content: center;    
 }
 
-#card-4{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(31, 15, 175, 0.5)), url("../assets/img/card4.jpg");
+#progress-content-section .content-grid img{
+    min-width: 200px;
+    max-width: 280px;
+    min-height: 200px;
+    max-height: 280px;
 }
 
-.banner-2-grid .grid-card-tittle{
-    color: var(--lila);
-    font-size: 1.5rem;
-    font-weight: bold;
+#progress-content-section .section-content h4 {
+	font-size:17px;
+	text-transform:uppercase;
+	color:var(--lila);
+	letter-spacing:1px;
 }
 
-.banner-2-grid .grid-card-content{
-    text-align: justify;
-    color: var(--just-white);
-    font-size: 1.5rem;
+#progress-content-section .section-content p {
+	font-size:16px;
+	line-height:1.8em;
+	color:var(--dark-color);
+}
+
+#progress-content-section .section-content.active {
+	display:block;
+}
+
+@keyframes FadeInUp {
+	0% {
+		transform:translateY(15px);
+		opacity:0;
+	}
+	
+	100% {
+		transform:translateY(0px);
+		opacity:1;
+	}
 }
 
 /* SECTION BANNER-3*/
@@ -350,7 +474,7 @@ nav .checkbtn {
     height: auto;
     display: flex;
     align-items: center;
-	background: linear-gradient(45deg, var(--dark-color),var(--dark-color), var(--celeste), var(--dark-color), var(--dark-color));    
+	background: linear-gradient(45deg, var(--dark-color),var(--dark-color), var(--felipe), var(--dark-color), var(--dark-color));    
     background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
     padding-top: 100px;
@@ -516,7 +640,7 @@ nav .checkbtn {
     height: auto;
     display: flex;
     align-items: center;
-    background-color: var(--just-white);
+    background-color: var(--felipe);
 }
 
 .banner-5-content{
@@ -543,7 +667,7 @@ nav .checkbtn {
     margin-top: 10px;
     font-size: 1.5rem;
     padding: 20px;
-    color: var(--dark-color);
+    color: var(--just-white);
 }
 
 .container
@@ -736,41 +860,49 @@ nav .checkbtn {
   line-height: 1.4rem;
 }
 
+/* SECTION 6 */
 
-/* SECTION 1 */
-
-.benefits{
+.banner-6{
     width: 100%;
-    min-height: 100vh;
     height: auto;
-    background-color: #201d20;
-    padding: 5rem 0 10rem 0;
+    display: flex;
+    align-items: center;
+    background-color: var(--dark-color);
 }
 
-.benefits h1{
+.banner-6-content{
+    display: inline-flex;
+    flex-direction: column;
+    text-align: center;
+    min-width: 240px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2%;
+}
+
+.banner-6-content h3{
     color: white;
     font-size: 3.4rem;
     text-align: center;
 }
 
-.benefits p{
+.banner-6-content p{
     text-align: justify;
     margin: 10px auto 0 auto;
     font-size: 1.5rem;
     padding: 20px;
     color: var(--white);
-    width: 80%;
 }
 
-.benefits .content{
-    width: 70%;
+.banner-6-content .banner-6-grid{
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 3rem;
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    gap: 30px;
+    justify-content: center;
 }
 
-.benefits .card-1{
+.banner-6-content .card-1{
     min-width: 100%;
     width: calc(250px * 0.4);
     height: auto;
@@ -785,7 +917,7 @@ nav .checkbtn {
     cursor: pointer;
 }
 
-.benefits .card-1 img{
+.banner-6-content .card-1 img{
     width: 30rem;
     height: 40rem;
     border-radius: inherit;
@@ -794,11 +926,11 @@ nav .checkbtn {
     transition: 0.3s;
 }
 
-.benefits .card-1 > *{
+.banner-6-content .card-1 > *{
     grid-area: main;
 }
 
-.benefits .card-1 > p{
+.banner-6-content .card-1 > p{
     opacity: 0;
     color: white;
     font-size: 1.5em;
@@ -808,12 +940,12 @@ nav .checkbtn {
     transition: opacity 400ms, transform 400ms;
 }
 
-.benefits .card-1:is(:hover, :focus) > img{
+.banner-6-content .card-1:is(:hover, :focus) > img{
     filter: brightness(0.4);
     transform: scale(1.1);
 }
 
-.benefits .card-1:is(:hover, :focus) > p{
+.banner-6-content .card-1:is(:hover, :focus) > p{
     opacity: 1;
     transform: scale(1.1001);
 }
@@ -1006,6 +1138,10 @@ footer h3{
         font-size: 1.2rem;
     }
 
+    #progress-content-section .content-grid{
+        grid-template-columns: 55% 45%;
+    }
+
     .banner-3-grid{
         display: grid;
         grid-template-columns: 1fr;
@@ -1025,6 +1161,10 @@ footer h3{
 
     .container .box{
         margin: 40px 30px;
+    }
+
+    .banner-6 .banner-6-grid{
+        grid-template-columns: repeat(1, minmax(250px, 1fr));    
     }
 
     footer h3{
@@ -1070,18 +1210,14 @@ footer h3{
         margin-right: 0px;
     }
 
-    .banner-2{
-        height: 650px;
+    #progress-content-section .content-grid{
+        grid-template-columns: 100%;
     }
+
 
     .banner-3{
         animation: gradient 7s ease infinite;    
         background-size: 200% 200%;
-    }
-
-    .benefits .content,
-    .bloc{
-        flex-direction: column;
     }
     
 }
@@ -1098,5 +1234,13 @@ footer h3{
     nav .checkbtn{
         width: fit-content;
         margin-right: 5px;
+    }
+
+    .banner-2{
+        padding: 0;
+    }
+
+    .copyright-container img{
+        padding: 0;
     }
 }
