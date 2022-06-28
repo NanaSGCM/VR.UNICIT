@@ -8,6 +8,13 @@
         content="Página informativa sobre realidad virtual realizada por los estudiantes de ingeniería en sistemas de UNICIT para la feria de ideas creativas 2022">
     <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KWXDMBX');</script>
+    <!-- End Google Tag Manager -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -21,6 +28,10 @@
 </head>
 
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWXDMBX"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <header>
         <nav>
             <div class="logo">
@@ -32,7 +43,7 @@
                 <i class="fa-solid fa-bars"></i>
             </label>
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="/index.html">Home</a></li>
                 <li><a href="#">Juegos</a></li>
                 <li><a href="#">Videos</a></li>
                 <li><a href="#">Comunidad</a></li>
@@ -296,6 +307,19 @@
             <span class="copyright">&copy;2022, rv-feria-unicit.gq</span>
         </div>
     </footer>
+    <div class="cookies-main">
+        <div class="aviso-cookies" id="aviso-cookies">
+            <img class="galleta" src="/assets/icons/cookies.png" alt="Galleta">
+            <h3 class="titulo">Cookies</h3>
+            <p class="parrafo">Utilizamos cookies propias y de terceros para mejorar nuestros servicios.</p>
+            <div class="cookies-abajo">
+                <button class="boton" id="btn-aceptar-cookies">De acuerdo</button>
+                <a class="enlace" href="aviso-cookies.html">Aviso de Cookies</a>
+            </div>
+        </div>
+    </div>
+    <div class="fondo-aviso-cookies" id="fondo-aviso-cookies"></div>
+    <script src="/js/cookies-js.js"></script>
     <script type="text/javascript">
         window.addEventListener("scroll", function () {
             var nav = document.querySelector("nav");

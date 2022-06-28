@@ -1,0 +1,86 @@
+/*MENÚ - GLOSARIO*/
+/*1.HEADER*/
+/*2.SECTION HOME*/
+/*3.SECTION HISTORIA*/
+/*4.SECTION JUEGOS*/
+/*5.SECTION VIDEOS*/
+/*6.SECTION MÁS*/
+
+:root{
+    --verdelima:#79f946;
+    --rosado:#F046F9;
+    --morado:#A83DDB;
+    --lila:#9250F2;
+    --azul:#513DDB;
+    --felipe: #241444;
+    --celeste:#465FF9;
+    --aqua: #00d3c8;
+    --just-white:#fff;
+    --white:#e7e7e7;
+    --dark-color:#201d20;
+    --black: #000000;
+}
+
+*{
+    font-family: 'JetBrains Mono', monospace;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+    background-color: var(--dark-color);
+}
+
+html::-webkit-scrollbar {
+    width: 12px;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: linear-gradient(transparent, var(--rosado));
+    border-radius: 6px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(transparent, var(--verdelima));
+}
+
+/* MAIN */
+p {
+	margin-bottom: 20px;
+	line-height: 150%;
+}
+
+main{
+    margin: 20px;
+    font-size: 1.4rem;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    margin: 60px;
+	background: #fff;
+	min-height: 80vh;
+	padding: 20px;
+	border-radius: 10px;
+}
+
+.content .boton{
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 10px;
+    margin-bottom: 20px;
+    color: var(--white);
+    background-color: var(--lila);
+    text-shadow: 0px 0px 6px rgba(255,255,255,0.7);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;    
+    border-radius: 15px;
+    width: 150px;
+}
+
+.content .boton:hover{
+    background-color: var(--rosado);
+}
