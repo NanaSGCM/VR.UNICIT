@@ -21,6 +21,7 @@
         href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;400;500&family=Nova+Square&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/index_style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="icon" href="/assets/icons/vr-glasses.png">
@@ -189,12 +190,60 @@
                         Aunque hayas escuchado hablar de ambas, la aumentada y virtual son conceptos diferentes. La realidad aumentada es la que conocemos en juegos como Pokémon Go. Es decir, utiliza el escenario real añadiendo determinados objetos o “personajes” a través de la pantalla o la cámara.                
                     </div>
                     <div class="calls">
-                        <a data-aos="fade-right" href="/ar-nft.html" target="_blank">
-                            Ver sticker
-                        </a>
-                        <a data-aos="fade-left" href="/ar-marker.html" target="_blank">
-                            Ver marker
-                        </a>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCentered">
+                            Markers
+                        </button>
+                          
+                          <!-- Modal -->
+                        <div class="modal" id="exampleModalCentered" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenteredLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalCenteredLabel">Markers</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <img class="marker" data-aos="fade-up" src="/assets/img/marker1.png" alt="sticker1 realidad virtual">
+                                    <a data-aos="fade-left" href="/ar-marker.html" target="_blank">
+                                        Ver marker
+                                    </a>
+                                    <img class="marker" data-aos="fade-up" src="/assets/img/marker2.png" alt="sticker2 realidad virtual">
+                                    <a data-aos="fade-left" href="/ar-marker-2.html" target="_blank">
+                                        Ver marker
+                                    </a>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCentered2">
+                           Stickers
+                        </button>
+                          
+                          <!-- Modal -->
+                        <div class="modal" id="exampleModalCentered2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenteredLabel2" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalCenteredLabel2">Stickers</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <img data-aos="fade-up" src="/assets/img/sticker.png" alt="marker1 realidad virtual">
+                                    <a data-aos="fade-right" href="/ar-nft.html" target="_blank">
+                                        Ver sticker
+                                    </a>
+                                    <img data-aos="fade-up" src="/assets/img/sticker2.jpeg" alt="marker2 realidad virtual">
+                                    <a data-aos="fade-right" href="/ar-nft-2.html" target="_blank">
+                                        Ver sticker
+                                    </a>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="banner-4-img" data-aos="fade-left">
@@ -319,6 +368,9 @@
     </div>
     <div class="fondo-aviso-cookies" id="fondo-aviso-cookies"></div>
     <script src="/js/cookies-js.js"></script>
+    <script type="text/javascript" src="js/jquery-3.2.1.slim.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript">
         window.addEventListener("scroll", function () {
             var nav = document.querySelector("nav");

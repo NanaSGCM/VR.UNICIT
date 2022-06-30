@@ -251,6 +251,7 @@ nav .checkbtn {
     align-items: center;
     padding-top: 100px;
     padding-bottom: 100px;
+    background-color: var(--dark-color);
 }
 
 .banner-2-content{
@@ -561,6 +562,7 @@ nav .checkbtn {
     padding-top: 100px;
     padding-bottom: 100px;
     justify-content: center;
+    background-color: var(--dark-color);
 }
 
 .banner-4-grid{
@@ -605,6 +607,27 @@ nav .checkbtn {
     width: 300px;
 }
 
+.banner-4-content .btn{
+    width: 130px;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color:var(--white);
+    color: var(--dark-color);
+    padding: 15px;
+    margin: 15px;
+    font-size: 1.5rem;
+    border-radius: 15px;
+    align-self: center;
+    box-shadow: rgba(0, 0, 0, 0.5) 5px 5px 15px;
+    border: none;
+}
+
+.banner-4-content .btn:hover{
+    background-color: var(--lila);
+    color: var(--just-white);
+    font-weight: bold;
+}
+
 .banner-4-content a{
     width: 130px;
     text-decoration: none;
@@ -614,8 +637,29 @@ nav .checkbtn {
     padding: 15px;
     font-size: 1.5rem;
     border-radius: 15px;
+    margin: 15px;
     align-self: center;
     box-shadow: rgba(0, 0, 0, 0.5) 5px 5px 15px;    
+}
+
+.modal-body{
+    display: flex;
+    flex-direction: column;
+    height:auto;
+    width: auto;
+    align-items: center;
+}
+
+.modal-body img{
+    max-width: 150px;
+    height: auto;
+    margin: 10px;
+    border-radius: 100px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.modal-body .marker{
+    border-radius: 0px;
 }
 
 .banner-4-content a:hover{
