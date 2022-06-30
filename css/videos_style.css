@@ -46,19 +46,6 @@ html::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(transparent, var(--verdelima));
 }
 
-.neon {
-    color: #fff;
-    text-shadow:
-      0 0 5px #fff,
-      0 0 10px #fff,
-      0 0 20px #fff,
-      0 0 40px #0ff,
-      0 0 80px #0ff,
-      0 0 90px #0ff,
-      0 0 100px #0ff,
-      0 0 150px #0ff;
-  }
-
 /*HEADER*/
 
 nav {
@@ -73,7 +60,7 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 99;
+    z-index: 111;
     transition: 0.2s;
 }
 
@@ -174,14 +161,16 @@ nav .checkbtn {
 /*SECTION BANNER-1*/
 
 .banner-1{
+    position: absolute;
     display: flex;
     align-items: center;
     position: relative;
     width: 100%;
     height: 400px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(107, 10, 114, 0.548)), url("../assets/img/FERIA-IDEAS-CREATIVAS_edit-20.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(35, 0, 235, 0.5)), url("../assets/img/videos.jpg");
     background-position: center center;
     background-size: cover;
+    z-index: 110;
 }
 
 .banner-1-content{
@@ -195,7 +184,7 @@ nav .checkbtn {
 }
 
 .banner-1-content h1{
-    padding-top: 20px;
+    padding: 20px;
     font-size: 3.6rem;
     font-weight: bold;
     font-family: 'Nova Square', cursive;
@@ -211,168 +200,172 @@ nav .checkbtn {
     color: var(--white);
 }
 
-/*FORMULARIO*/
-.formulario{
-    width: 100%;
-    height: fit-content;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    font-size: 1.5rem;
-    background-image: url("/assets/img/bckg2.jpg");
-    background-size: cover;
-    background-position: center top;
+
+/*realidad virtual*/
+.all-rv{
+    position: relative;
+    height: 100%;
+    background: linear-gradient(#6084d7 25%, #a2cef4 50%, #a2cef4 50%, #6084d7 100%);
 }
 
-.formulario h5{
-    padding: 20px;
-    font-size: 2.2rem;
+.realidad-virtual  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    min-width: 320px;
+    max-width: 1000px;
+    padding-top: 100px;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin: 0 auto;
+}
+
+.realidad-virtual h3{
+    text-transform: uppercase;
+    font-size: 3.4rem;    
     font-weight: bold;
-    text-align: center;
     font-family: 'Nova Square', cursive;
-    color: var(--verdelima);
+    color: var(--morado);
+    text-shadow: 0px 0px 4px rgba(255, 142, 249, 0.7);
 }
 
-.formulario-grid{
-    display: grid;
-    grid-template-columns: 40% 60%;
-}
-
-.form-grid-2{
-    text-align: center;
+.realidad-virtual-information{
+    text-align: justify;
+    font-size: 1.5rem;
     padding: 20px;
-    display: inline-flex;
+    color: var(--white);
+}
+
+/*SLIDER*/
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*JUGABLES*/
+.jugables{
+    min-width: 240px;
+    max-width: 1000px;
+    height: auto;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-}
-
-.form-grid-1{
-    padding: 20px;
-}
-
-.form-grid-2 h3{
-    padding: 20px;
-    font-size: 2.2rem;
-    font-weight: bold;
+    padding-bottom: 100px;
     text-align: center;
+    margin: 0 auto;
+    padding: 2%;
+}
+
+.jugables h4{
+    text-transform: uppercase;
+    font-size: 2.6rem;    
+    font-weight: 600;
     font-family: 'Nova Square', cursive;
+    color: var(--celeste);
+}
+
+.jugables-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.vr-grid{
+    width: 95%;
+    display: grid;
+    padding: 2%;
+    gap: 30px;
+    margin: 0 auto;
+}
+
+.vr-grid h5{
+    padding: 20px;
+    font-size: 2rem;
     color: var(--just-white);
 }
 
-.form-grid-2 img{
-    max-width: 150px;
+.vr-jugable-card{
+    width: auto;
+    border-radius: 15px;
+    background-color: var(--celeste);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 9px 18px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    margin: 20px;
+}
+
+.responsive-iframe-jugable{
+    width: 100%;
     height: auto;
-    margin: 10px;
-    border-radius: 100px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    padding: 0 2% 2% 2%;
 }
 
-label{
-    color: var(--felipe);
+/*PRUEBA*/
+.wrap {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin: 0 auto;
+  perspective: 360px;
+  perspective-origin: 50% 50%;
+  overflow: hidden;
+}
+.top-plane, .bottom-plane {
+  width: 200%;
+  height: 130%;
+  position: absolute;
+  bottom: -30%;
+  left: -50%;
+  background-image: -webkit-linear-gradient(#a2cef4 2px, transparent 2px), -webkit-linear-gradient(left, #a2cef4 2px, transparent 2px);
+  background-size: 100px 100px, 100px 100px;
+  background-position: -1px -1px, -1px -1px;
+  transform: rotateX(85deg);
+  animation: planeMoveTop 2s infinite linear;
 }
 
-.cursos{
-    min-width: 260px;
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    color: var(--felipe);
-    padding: 25px;
-    border-radius: 15px;
-    background: rgba(255, 255, 255, 0.30);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(2px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
+.bottom-plane {
+    top: -30%;
 }
 
-.stickers{
-    min-width: 260px;
-    margin: 0 auto;
-    color: var(--felipe);
-    border-radius: 15px;
-    background: rgba(255, 255, 255, 0.30);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(2px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    margin-bottom: 20px;
+@keyframes planeMoveTop {
+  from {
+    background-position: 0px -100px, 0px 0px;
+  }
+  to {
+    background-position: 0px 0px, 100px 0px;
+  }
 }
 
-.cursos a{
-    text-decoration: none;
-    text-align: center;
-    font-size: 1.5rem;
-    padding: 10px;
-    margin: 5px auto 0 auto;
-    color: var(--just-white);
-    background-color: var(--aqua);
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-    border-radius: 10px;
-    border-color: transparent;
-    width: 200px;
-    outline: none;
-}
 
-.cursos a:hover{
-    background-color: var(--verdelima);
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-}
-
-.cursos p{
-    font-size: 1.3rem;
-}
-
-form{
-    min-width: 260px;
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    color: var(--white);
-    padding: 25px;
-    border-radius: 15px;
-    background: rgba(255, 255, 255, 0.30);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(2px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-}
-
-input{
-    height: 40px;
-    border: double 4px transparent;
-    border-radius: 10px;
-    outline: none;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-    background-image: linear-gradient(white, white), 
-}
-
-input:focus{
-    border-radius: 10px;
-    background-image: linear-gradient(white, white), 
-    linear-gradient(to right, var(--verdelima), var(--aqua));
-    background-origin: border-box;
-    background-clip: content-box, border-box;    
-    outline: none;
-}
-
-.submit{
-    text-align: center;
-    font-size: 1.5rem;
-    padding: 10px;
-    margin: 0 auto;
-    color: var(--just-white);
-    background-color: var(--aqua);
-    border-radius: 10px;
-    width: 150px;
-    outline: none;
-    border: none;
-}
-
-.submit:hover{
-    background-color: var(--verdelima);
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-}
-    
 /*FOOTER*/
 footer{
+    position: absolute;
     height: fit-content;
     width: 100%;
     display: flex;
@@ -381,6 +374,7 @@ footer{
     flex-direction: column;
     color: var(--white);
     background-color: black;
+    z-index: 112;
 }
 
 footer h3{
@@ -497,7 +491,7 @@ footer h3{
 	border-radius: 10px;
 	position: fixed;
 	bottom: 20px;
-	z-index: 100;
+	z-index: 101;
 	padding-top: 60px;
 	box-shadow: 0px 2px 20px 10px rgba(222,222,222,.25);
 	text-align: center;
@@ -566,7 +560,7 @@ footer h3{
 	display: none;
 	background: rgba(96, 63, 100, 0.8);
 	position: fixed;
-	z-index: 99;
+	z-index: 98;
 	width: 100vw;
 	height: 100vh;
 	top: 0;
@@ -648,17 +642,8 @@ footer h3{
         top: 0%;
     }
 
-    
-    .formulario-grid{
+    .realidad-virtual-grid{
         grid-template-columns: 100%;
-    }
-
-    .form-grid-2{
-        order: 1;
-    }
-
-    .form-grid-1{
-        order: 2;
     }
 
     footer h3{
@@ -702,6 +687,10 @@ footer h3{
 
     nav .logo{
         margin-right: 0px;
+    }
+
+    .jugables-grid{
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 
